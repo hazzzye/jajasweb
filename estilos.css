@@ -125,7 +125,7 @@ header:hover {
   background: none;
   border: none;
   color: white;
-  font-size: 4rem;
+  font-size: 1rem;
   font-family: Montserrat, sans-serif;
   cursor: pointer;
   transition: transform 0.3s ease;
