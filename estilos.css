@@ -101,7 +101,7 @@ header:hover {
 /* Contenedor del logo y botón */
 .contenedor-header {
   display: flex;
-  padding: 3rem;
+  padding: 1rem;
 }
 
 /* Logo */
