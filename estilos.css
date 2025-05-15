@@ -108,6 +108,11 @@ header:hover {
   height: 100%;
 }
 
+.bloque-logo{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
 /* Logo */
 .nombre {
   padding-left: 0rem;
@@ -128,10 +133,7 @@ header:hover {
   display: flex;
   background: none;
   border: none;
-  align-items: center;
   color: white;
-  justify-content: center;
-  
   font-family: Montserrat, sans-serif;
   cursor: pointer;
   transition: transform 0.3s ease;
