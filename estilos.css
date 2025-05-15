@@ -59,13 +59,13 @@
 }
 
 .texto-lema h1 {
-  font-size: 2rem;
+  font-size: 0.5rem;
   margin-bottom: 1rem;
   font-weight: 400;
 }
 
 .texto-lema p {
-  font-size: 1rem;
+  font-size: 0.5rem;
   line-height: 1.4;
 }
 
