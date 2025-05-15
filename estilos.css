@@ -102,10 +102,10 @@ header:hover {
 /* Contenedor del logo y botón */
 .contenedor-header {
   display: flex;
+  justify-content: space-between; /* separa logo y botón */
   align-items: center;
-  justify-content: space-between;
-  padding: 0.2rem;
   height: 100%;
+  padding: 0 2rem;
 }
 
 .bloque-logo{
@@ -128,15 +128,17 @@ header:hover {
 
 
 .menu-btn {
-  font-size: 3rem;
+  font-size: 2.2rem;
   padding: 0.5rem;
   display: flex;
-  background: none;
-  border: none;
+  align-items: center;
+  justify-content: center;
+
   color: white;
   font-family: Montserrat, sans-serif;
   cursor: pointer;
   transition: transform 0.3s ease;
+
 }
 
 .menu-btn:hover {
