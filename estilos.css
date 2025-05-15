@@ -128,11 +128,9 @@ header:hover {
   font-size: 4rem;
   font-family: Montserrat, sans-serif;
   cursor: pointer;
-
   transition: transform 0.3s ease;
-
-
 }
+
 .menu-btn:hover {
   transform: scale(1.2);}
   
