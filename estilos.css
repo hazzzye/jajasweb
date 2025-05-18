@@ -111,6 +111,7 @@ header:hover {
 
 /* Bloque que contiene logo + nombre */
 .bloque-logo {
+  height: 100%;
   display: flex;
   align-items: center;
   gap: 1rem;
