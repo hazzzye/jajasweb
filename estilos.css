@@ -11,7 +11,7 @@
 
 /*Header*/
 
-header {
+  header {
   position: fixed;
   top: 0;
   left: 0;
@@ -20,32 +20,32 @@ header {
   background-color: rgba(31, 31, 31, 0.37);
   transition: background-color 0.5s ease;
   z-index: 1000;
-}
-header:hover {
+  }
+  header:hover {
   background-color: rgba(19, 19, 19, 0.8);
-}
-.contenedor-header {
+  }
+  .contenedor-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 100%;
   padding: 0 1rem;
-}
-.bloque-logo {
+  }
+  .bloque-logo {
   height: 100%;
   display: flex;
   align-items: center;
   gap: 1rem;
-}
-.logo,
-.nombre {
+  }
+  .logo,
+  .nombre {
   height: 100px;
   width: auto;
-}
+  }
 
-/*Menu*/
+  /*Menu*/
 
-.menu-btn {
+  .menu-btn {
   background: none;
   border: none;
   color: white;
@@ -53,13 +53,13 @@ header:hover {
   font-family: Montserrat, sans-serif;
   cursor: pointer;
   transition: transform 0.3s ease;
-}
-.menu-btn:hover {
+  }
+  .menu-btn:hover {
   transform: scale(1.2);
-}
-/* Menú desplegable */
+  }
+  /* Menú desplegable */
 
-.menu-desplegable {
+  .menu-desplegable {
   position: fixed;
   top: 0;
   right: 0;
@@ -76,10 +76,10 @@ header:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
+  }
 .menu-desplegable.activo {
   transform: translateX(0);
-}
+  }
 .menu-desplegable ul {
   flex-direction: column; /* Acomoda los <li> verticalmente */
   display: flex; /* Asegura que flex funcione en vertical */
