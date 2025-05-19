@@ -8,38 +8,35 @@
   <script src="script.js" defer></script>
 </head>
 <body>
-  <!-- Botón de abrir menú (mobile) -->
- <button id="open-sidebar-button" onclick="openSlidebar()" aria-label="Abrir menú" aria-expanded="false" aria-controls="navbar">
-    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="white" viewBox="0 0 24 24">
-      <path d="M4 6h16M4 12h16M4 18h16" />
-    </svg>
-  </button>
 
-  <!-- Menú de navegación -->
-  <nav id="navbar">
-    <ul>
-      <li>
-        <button id="close-sidebar-button" onclick="closeSidebar()" aria-label="Cerrar menú">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" viewBox="0 0 24 24">
-            <path d="M6 6L18 18M6 18L18 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-          </svg>
+  <!-- Botón de abrir menú (mobile) -->
+
+   <header>
+    <div class="container-header">
+      <button id="open-sidebar-button" aria-label="Abrir menú" aria-expanded="false" aria-controls="navbar">
+      ☰
+      </button>
+      <nav id="navbar">
+        <button id="close-sidebar-button" aria-label="Cerrar menú">
+          ✕
         </button>
-      </li>
-      <li class="home-li"><a  href="index.html" aria-current="page">Inicio</a></li>
-      <li><a class="active-link" href="nosotros.html">Nosotros</a></li>
-      <li><a href="servicios.html">Servicios</a></li>
-      <li><a href="portafolio.html">Portafolio</a></li>
-      <li><a href="contacto.html">Contacto</a></li>
-    </ul>
-  </nav>
+        <ul>
+          <li class="home-li"><a class="active-link" href="index.html">Inicio</a></li>
+          <li><a class="active-link" href="nosotros.html">Nosotros</a></li>
+          <li><a href="servicios.html">Servicios</a></li>
+          <li><a href="portafolio.html">Portafolio</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>  
+    </div>
+  </header>
 
   <!-- Overlay -->
-  <div id="overlay" onclick="closeSidebar()" aria-hidden="true"></div>
+  <div id="overlay" aria-hidden="true"></div>
 
   <!-- Contenido principal -->
   <main>
     <h1>Nosotros</h1>
-    <p>Ut sed erat a sem rutrum consectetur. Fusce feugiat, tortor mollis fermentum sodales, ante neque pharetra dolor, nec euismod diam velit ac dui. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nunc vel ligula quis ipsum malesuada egestas. Mauris accumsan lacus vitae tincidunt fringilla. Sed placerat rutrum aliquam. Integer turpis enim, interdum hendrerit fermentum eget, tincidunt a libero.</p>
-  </main>
-</body>
-</html>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam quis eros tempor, tempus nunc sed, consectetur leo. D
+    
