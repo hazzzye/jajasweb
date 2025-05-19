@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>IC Arquitectura & Obras | Inicio</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <!-- Botón de abrir menú (mobile) -->
+ <button id="open-sidebar-button" onclick="openSlidebar()" aria-label="Abrir menú" aria-expanded="false" aria-controls="navbar">
+    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="white" viewBox="0 0 24 24">
+      <path d="M4 6h16M4 12h16M4 18h16" />
+    </svg>
+  </button>
+
+  <!-- Menú de navegación -->
+  <nav id="navbar">
+    <ul>
+      <li>
+        <button id="close-sidebar-button" onclick="closeSidebar()" aria-label="Cerrar menú">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" viewBox="0 0 24 24">
+            <path d="M6 6L18 18M6 18L18 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+          </svg>
+        </button>
+      </li>
+      <li class="home-li"><a href="index.html" aria-current="page">Inicio</a></li>
+      <li><a href="nosotros.html">Nosotros</a></li>
+      <li><a href="servicios.html">Servicios</a></li>
+      <li><a class="active-link" href="portafolio.html">Portafolio</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <!-- Overlay -->
+  <div id="overlay" onclick="closeSidebar()" aria-hidden="true"></div>
+
+  <!-- Contenido principal -->
+  <main>
+    <h1>Contacto</h1>
+    <p>Mauris bibendum diam eu nulla bibendum, in hendrerit ligula tincidunt. Etiam vitae mollis urna. Vivamus et lacus neque. Fusce eu sem vitae odio mattis lacinia at venenatis nisl. Duis blandit tellus quis tellus malesuada, ut commodo ipsum ullamcorper. Suspendisse vulputate imperdiet purus, eget tempus metus placerat rutrum. Cras cursus ex ut sem maximus dictum. Ut lacinia accumsan pharetra. Nunc eget felis ut nibh molestie tempus.</p>
+  </main>
+</body>
+</html>
