@@ -2,6 +2,7 @@
 
 :root {
   --primary-color: #332D56;
+
   --hover-color: #4A417D;
   --text-color: #ffffff;
   --accent-color: #71C0BB;
@@ -26,10 +27,49 @@ body {
 
 
 /*Header*/
-nav {
-  background-color: var(--primary-color);
-  border-bottom: 1px solid var(--hover-color);
+
+.container-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5em 1em;
+  background-color: rgb(51, 45, 86, 0.5);
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+  transition: background-color 0.5s ease;
+
 }
+
+.container-header:hover{
+  background-color: var(--primary-color);
+}
+
+.logotipo-isotipo {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.isotipo {
+  height: 60px;
+  width: auto;
+}
+
+.logotipo {
+  height: 40px;
+  width: auto;
+}
+
+nav {
+  background-color: rgb(0, 0, 0, 0);
+  position: relative;
+  top: 0;
+  z-index: 9;  
+  display: flex;
+  margin-left: auto;
+}
+
 
 nav ul {
   list-style: none;
@@ -48,14 +88,19 @@ nav .home-li {
 
 nav a {
   display: flex;
+  font-size: 1.5rem;
   text-decoration: none;
   color: var(--text-color);
   padding: 1em 2em;
-  transition: background-color 150ms ease;
+  background-color: rgb(0, 0, 0, 0 );
+  transition: transform 0.5s ease;
+  transition: background-color 0.5s ease;
+
 }
 
 nav a:hover {
-  background-color: var(--hover-color);
+  transform: scale(1.1);
+  background-color: var(--alt-color);
 }
 
 nav a.active-link {
@@ -83,18 +128,44 @@ nav a.active-link {
 }
 
 /*Hero*/
-
 .contenido-hero {
- padding-top:0%;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
 }
+
+.text-hero {
+  position: absolute;
+  top: 85%;
+  left: 35%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  color: white;
+  text-align: left;
+  padding: 1em;
+  border-radius: 1em;
+  max-width: 90%;
+}
+
+.text-hero h1 {
+  font-size: 3rem;
+}
+
+.text-hero p{
+  font-size: 1.5rem;
+}
+
 
 /*Slideshow*/
 
 .slideshow {
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: 1050px;
-  overflow: hidden;
+  height: 100%;
+  z-index: 1;
 }
 .slide {
   position: absolute;
@@ -121,38 +192,41 @@ main {
   padding: 2em;
 }
 
-@media screen and (max-width: 700px) {
-
-    .contenido-hero {
-    padding-top: 20%;
-    text-align: center;
-    padding-left: 1em;
-    padding-right: 1em;
+@media screen and (max-width: 1450px) {
+  .contenido-hero {
+    height: 100vh;
   }
 
-  .contenido-hero h1 {
-    font-size: 1.5em;
+  .text-hero {
+    padding: 1em;
+    font-size: 0.9rem;
+    max-width: 90%;
+    background-color: rgba(0, 0, 0, 0.5); /* mejora contraste en móviles */
   }
 
-  .contenido-hero p {
-    font-size: 1em;
+  .text-hero h1 {
+    font-size: 1.2rem;
+    line-height: 1.4em;
+  }
+
+  .text-hero p {
+    font-size: 0.95rem;
+    line-height: 1.3em;
   }
 
   .slideshow {
-    height: 300px; /* Más adecuado para móviles */
+    height: 100vh;
   }
 
   .slide {
-    height: 300px;
+    height: 100vh;
   }
 
   .slide img {
-    object-fit: cover;
     height: 100%;
     width: 100%;
+    object-fit: cover;
   }
-
-
 
   #open-sidebar-button {
     color: var(--text-color);
@@ -171,7 +245,6 @@ main {
     width: min(15em, 100%);
     z-index: 10;
     background-color: var(--primary-color);
-    border-left: 1px solid var(--hover-color);
     transition: right 300ms ease-out;
     flex-direction: column;
     display: flex;
@@ -202,5 +275,3 @@ main {
   display: block;
 }
 }
-
-

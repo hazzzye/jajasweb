@@ -25,3 +25,24 @@ document.querySelectorAll('nav a').forEach(link => {
     link.classList.add('active-link');
   }
 });
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  let indiceActual = 0;
+  const slides = document.querySelectorAll('.slide');
+
+  function mostrarSlide(n) {
+    slides.forEach((slide, index) => {
+      slide.classList.remove('active');
+      if (index === n) slide.classList.add('active');
+    });
+  }
+
+  function cambiarSlide() {
+    indiceActual = (indiceActual + 1) % slides.length;
+    mostrarSlide(indiceActual);
+  }
+
+  mostrarSlide(indiceActual);
+  setInterval(cambiarSlide, 5000);
+});

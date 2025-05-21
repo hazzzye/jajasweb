@@ -10,9 +10,14 @@
 <body>
 
   <!-- Botón de abrir menú (mobile) -->
-
-   <header>
+  <header>
     <div class="container-header">
+
+      <div class="logotipo-Isotipo">
+        <img src="isotipo.png" alt="isotipo" class="isotipo">
+        <img src="logotipo-blanco.png" alt="IC Arquitectura & Construcción" class="logotipo" >
+      </div>
+
       <button id="open-sidebar-button" aria-label="Abrir menú" aria-expanded="false" aria-controls="navbar">
       ☰
       </button>
@@ -21,18 +26,19 @@
           ✕
         </button>
         <ul>
-          <li class="home-li"><a href="index.html">Inicio</a></li>
+          <li><a  href="index.html">Inicio</a></li>
           <li><a class="active-link" href="nosotros.html">Nosotros</a></li>
           <li><a href="servicios.html">Servicios</a></li>
           <li><a href="portafolio.html">Portafolio</a></li>
           <li><a href="contacto.html">Contacto</a></li>
         </ul>
       </nav>  
+
     </div>
+    <!-- Overlay -->
+      <div id="overlay" aria-hidden="true"></div>
   </header>
 
-  <!-- Overlay -->
-  <div id="overlay" aria-hidden="true"></div>
 
   <!-- Contenido principal -->
   <main>
