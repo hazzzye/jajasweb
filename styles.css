@@ -89,7 +89,7 @@ nav .home-li {
 
 nav a {
   display: flex;
-  font-size: 0.5rem;
+  font-size: 1rem;
   text-decoration: none;
   color: var(--text-color);
   padding: 1em 2em;
@@ -261,6 +261,7 @@ main {
   }
 
   nav a {
+    font-size: 2rem;
     width: 100%;
     padding-left: 2.5em;
   }
