@@ -275,4 +275,21 @@ main {
 #overlay.show {
   display: block;
 }
+.logotipo-isotipo {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.isotipo {
+  height: 30px;
+  width: auto;
+}
+
+.logotipo {
+  padding-left: 1rem;
+  height: 30px;
+  width: auto;
+}
+
 }
