@@ -1,11 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
 :root {
-  --primary-color: #332D56;
+  
 
+
+
+  --primary-color: #1E2B45;
   --hover-color: #4A417D;
   --text-color: #ffffff;
-  --accent-color: #71C0BB;
+  --text-color-2: #000000;
+  --accent-color: #EFD9A8;
   --alt-color: #E3EEB2;
 }
 
@@ -33,7 +37,7 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 0.5em 1em;
-  background-color: rgb(51, 45, 86, 0.5);
+  background-color: rgb( 90, 104, 133, 0.7);
   position: fixed;
   z-index: 10;
   width: 100%;
@@ -95,18 +99,16 @@ nav a {
   padding: 1em 2em;
   background-color: rgb(0, 0, 0, 0 );
   transition: transform 0.5s ease;
-  transition: background-color 0.5s ease;
 
 }
 
 nav a:hover {
   transform: scale(1.1);
-  background-color: var(--hover-color);
 }
 
 nav a.active-link {
   background-color: var(--accent-color);
-  color: var(--text-color);
+  color: var(--text-color-2);
   font-weight: bold;
 }
 
