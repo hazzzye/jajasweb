@@ -1,16 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
 :root {
-  
-
-
-
-  --primary-color: #1E2B45;
-  --hover-color: #4A417D;
-  --text-color: #ffffff;
-  --text-color-2: #000000;
-  --accent-color: #EFD9A8;
-  --alt-color: #E3EEB2;
+  --primary-color: #2C3E50;
+  --secondary-color: #F9D291;
+  --background-color: #EEEEEE;
+  --text-color-light: #F4F4F4;
+  --text-color-dark: #2C2C2C; 
+  --color-accent: #9BB5CF;
 }
 
 * {
@@ -26,7 +22,7 @@ html {
 
 body {
   min-height: 100vh;
-  background-color: var(--primary-color);
+  background-color: var(--background-color);
 }
 
 
@@ -37,7 +33,7 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 0.5em 1em;
-  background-color: rgb( 90, 104, 133, 0.7);
+  background-color: rgb( 114, 129, 143, 0.85);
   position: fixed;
   z-index: 10;
   width: 100%;
@@ -94,8 +90,9 @@ nav .home-li {
 nav a {
   display: flex;
   font-size: 1rem;
+  font-weight: 400;
   text-decoration: none;
-  color: var(--text-color);
+  color: var(--text-color-light);
   padding: 1em 2em;
   background-color: rgb(0, 0, 0, 0 );
   transition: transform 0.5s ease;
@@ -107,9 +104,9 @@ nav a:hover {
 }
 
 nav a.active-link {
-  background-color: var(--accent-color);
-  color: var(--text-color-2);
-  font-weight: bold;
+  background-color: var(--secondary-color);
+  color: var(--text-color-light);
+  font-weight: 800;
 }
 
 #open-sidebar-button,
@@ -189,10 +186,49 @@ nav a.active-link {
 }
 
 
+
+/* Que Hacemos*/
+
+#container-servicios {
+  display: flex;
+  top: 100px;
+  border: 8px solid red;
+  padding: 2rem;
+  gap: 2rem;
+  min-height: 800px;
+  justify-content: space-evenly;
+}
+
+.intro-servicios-l {
+ color: var(--text-color-dark);
+  border: #F9D291;
+  gap: 5rem;
+    border: 8px solid red;
+
+}
+
+.intro-servicios-l h2{
+ font-size: 5rem;
+}
+
+.intro-servicios-l p{
+ font-size: 2rem;
+}
+
+
+.intro-servicios-r {
+ color: var(--text-color-dark);
+  border: #F9D291;
+  gap: 5rem;
+    border: 8px solid red;
+
+}
+
 /*main*/
 
 main {
-  padding: 2em;
+top: 30px;
+padding: 2em;
 }
 
 @media screen and (max-width: 1450px) {
