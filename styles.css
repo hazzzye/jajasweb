@@ -193,10 +193,10 @@ nav a.active-link {
 #servicios-extendidos {
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 3rem;
   padding: 4rem 2rem;
   background-color: var(--background-color);
+  align-items: center;
 }
 
 .tarjeta-servicio-grande {
@@ -207,9 +207,9 @@ nav a.active-link {
   overflow: hidden;
   background-size: cover;
   background-position: center;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease;
-  width: 85%
+  width: 85%;
 }
 
 .tarjeta-servicio-grande:hover {
@@ -220,47 +220,69 @@ nav a.active-link {
   position: absolute;
   inset: 0;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  background-color: rgb( 8, 12, 16, 0.9); /* capa oscura sobre imagen */
+  background-color: rgba(8, 12, 16, 0.7);
   color: var(--text-color-light);
-  padding: 2rem 3rem;
-  transition: all 0.5s ease;
+  overflow: hidden;
+  transition: background-color 0.5s ease;
 }
 
-.contenido-servicio :hover {
-  background-color: rgb( 86, 100, 114, 0.6); /* capa oscura sobre imagen */
-  color: var(--text-color-light);
-
+.tarjeta-servicio-grande:hover .contenido-servicio {
+  background-color: rgba(8, 12, 16, 0.5);
 }
 
 .titulo-servicio {
-  font-size: 2.5rem;
-  font-weight: bold;
-  transform: translateX(0);
-  transition: transform 0.5s ease;
-  flex: 1;
+  font-size: 3rem;
+  font-weight: 800;
+  transition: transform 0.6s ease;
+  z-index: 2;
+  position: relative;
 }
 
+/* Nueva posición fija para descripción */
 .descripcion-oculta {
+  position: absolute;
+  width: 40%;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.5rem;
+  font-weight: 500;
   opacity: 0;
-  max-width: 45%;
-  transform: translateX(50%);
-  transition: all 0.5s ease;
-  font-size: 1.2rem;
-  line-height: 1.6;
-  flex: 1;
+  transition: opacity 0.5s ease, transform 0.6s ease;
+  z-index: 2;
+  text-align: left;
 }
 
-.tarjeta-servicio-grande:hover .titulo-servicio {
-  transform: translateX(-10%);
+/* Hover hacia la izquierda */
+.tarjeta-servicio-grande[data-orientacion="izquierda"] .descripcion-oculta {
+  right: 5%;
+  transform: translateY(-50%) translateX(20%);
 }
 
-.tarjeta-servicio-grande:hover .descripcion-oculta {
+.tarjeta-servicio-grande[data-orientacion="izquierda"]:hover .titulo-servicio {
+  transform: translateX(-70%);
+}
+
+.tarjeta-servicio-grande[data-orientacion="izquierda"]:hover .descripcion-oculta {
   opacity: 1;
-  transform: translateX(0%);
+  transform: translateY(-50%) translateX(0%);
 }
 
+/* Hover hacia la derecha */
+.tarjeta-servicio-grande[data-orientacion="derecha"] .descripcion-oculta {
+  left: 5%;
+  transform: translateY(-50%) translateX(-20%);
+}
+
+.tarjeta-servicio-grande[data-orientacion="derecha"]:hover .titulo-servicio {
+  transform: translateX(70%);
+}
+
+.tarjeta-servicio-grande[data-orientacion="derecha"]:hover .descripcion-oculta {
+  opacity: 1;
+  transform: translateY(-50%) translateX(0%);
+}
 
 /*main*/
 
