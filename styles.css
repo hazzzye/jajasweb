@@ -375,32 +375,29 @@ padding: 2em;
     left: 1em;
   }
 
-#overlay.show {
-  display: block;
-}
-.logotipo-isotipo {
-  display: flex;
-  align-items: center;
-  gap: 0.5em;
-}
+  #overlay.show {
+    display: block;
+  }
 
-.isotipo {
-  height: 28px;
-  width: auto;
-}
+  .logotipo-isotipo {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+  }
 
-.logotipo {
-  height: 20px;
-  width: auto;
-  padding-left: 0.5rem;
-  max-width: 120px;
-  object-fit: contain;
-}
+  .isotipo {
+    height: 28px;
+    width: auto;
+  }
 
-}
+  .logotipo {
+    height: 20px;
+    width: auto;
+    padding-left: 0.5rem;
+    max-width: 120px;
+    object-fit: contain;
+  }
 
-
-@media (max-width: 768px) {
   .tarjeta-servicio-grande {
     width: 100%;
     height: auto;
@@ -432,3 +429,5 @@ padding: 2em;
     text-align: center;
   }
 }
+
+
