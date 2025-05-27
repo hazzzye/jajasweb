@@ -36,6 +36,7 @@ body {
   background-color: rgb( 114, 129, 143, 0.85);
   position: fixed;
   z-index: 10;
+  height: 5.5rem;
   width: 100%;
   transition: background-color 0.5s ease;
 
@@ -52,7 +53,7 @@ body {
 }
 
 .isotipo {
-  height: 40px;
+  height: 55px;
   width: auto;
 }
 
@@ -89,7 +90,7 @@ nav .home-li {
 
 nav a {
   display: flex;
-  font-size: 1rem;
+  font-size: 1.15rem;
   font-weight: 400;
   text-decoration: none;
   color: var(--text-color-light);
@@ -189,40 +190,77 @@ nav a.active-link {
 
 /* Que Hacemos*/
 
-#container-servicios {
+#servicios-extendidos {
   display: flex;
-  top: 100px;
-  border: 8px solid red;
-  padding: 2rem;
-  gap: 2rem;
-  min-height: 800px;
-  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  padding: 4rem 2rem;
+  background-color: var(--background-color);
 }
 
-.intro-servicios-l {
- color: var(--text-color-dark);
-  border: #F9D291;
-  gap: 5rem;
-    border: 8px solid red;
+.tarjeta-servicio-grande {
+  position: relative;
+  height: 50vh;
+  min-height: 400px;
+  border-radius: 16px;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+  width: 85%
+}
+
+.tarjeta-servicio-grande:hover {
+  transform: scale(1.02);
+}
+
+.contenido-servicio {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb( 8, 12, 16, 0.9); /* capa oscura sobre imagen */
+  color: var(--text-color-light);
+  padding: 2rem 3rem;
+  transition: all 0.5s ease;
+}
+
+.contenido-servicio :hover {
+  background-color: rgb( 86, 100, 114, 0.6); /* capa oscura sobre imagen */
+  color: var(--text-color-light);
 
 }
 
-.intro-servicios-l h2{
- font-size: 5rem;
+.titulo-servicio {
+  font-size: 2.5rem;
+  font-weight: bold;
+  transform: translateX(0);
+  transition: transform 0.5s ease;
+  flex: 1;
 }
 
-.intro-servicios-l p{
- font-size: 2rem;
+.descripcion-oculta {
+  opacity: 0;
+  max-width: 45%;
+  transform: translateX(50%);
+  transition: all 0.5s ease;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  flex: 1;
 }
 
-
-.intro-servicios-r {
- color: var(--text-color-dark);
-  border: #F9D291;
-  gap: 5rem;
-    border: 8px solid red;
-
+.tarjeta-servicio-grande:hover .titulo-servicio {
+  transform: translateX(-10%);
 }
+
+.tarjeta-servicio-grande:hover .descripcion-oculta {
+  opacity: 1;
+  transform: translateX(0%);
+}
+
 
 /*main*/
 

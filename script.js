@@ -46,3 +46,18 @@ document.addEventListener("DOMContentLoaded", function () {
   mostrarSlide(indiceActual);
   setInterval(cambiarSlide, 5000);
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+  const servicios = document.querySelectorAll('.servicio');
+  const fondo = document.getElementById('imagen-servicio');
+  const descripcion = document.getElementById('descripcion-servicio');
+
+  servicios.forEach(servicio => {
+    servicio.addEventListener('mouseenter', () => {
+      const img = servicio.getAttribute('data-img');
+      const text = servicio.getAttribute('data-text');
+      fondo.style.backgroundImage = `url(${img})`;
+      descripcion.innerHTML = `<h3>${servicio.textContent}</h3><p>${text}</p>`;
+    });
+  });
+});
