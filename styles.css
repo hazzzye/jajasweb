@@ -291,7 +291,7 @@ top: 30px;
 padding: 2em;
 }
 
-@media screen and (max-width: 1450px) {
+@media screen and (max-width: 1400) {
   .contenido-hero {
     height: 100vh;
   }
@@ -397,4 +397,38 @@ padding: 2em;
   object-fit: contain;
 }
 
+}
+
+
+@media (max-width: 768px) {
+  .tarjeta-servicio-grande {
+    width: 100%;
+    height: auto;
+    min-height: 300px;
+    flex-direction: column;
+  }
+
+  .contenido-servicio {
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem 1rem;
+    text-align: center;
+    background-color: rgba(8, 12, 16, 0.65);
+  }
+
+  .titulo-servicio {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .descripcion-oculta {
+    position: static;
+    transform: none;
+    opacity: 1 !important;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    max-width: 100%;
+    text-align: center;
+  }
 }
